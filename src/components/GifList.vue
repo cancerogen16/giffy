@@ -1,5 +1,7 @@
 <template>
-  <gif-item v-for="gif in gifs" :key="gif.id" :gif="gif" />
+  <div class="gifList">
+      <gif-item v-for="gif in gifs" :key="gif.id" :gif="gif" />
+  </div>
 </template>
 
 <script>
@@ -15,5 +17,9 @@ export default {
 </script>
 
 <style scoped>
-
+    .gifList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 </style>

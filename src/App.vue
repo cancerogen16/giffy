@@ -1,5 +1,5 @@
 <template>
-<gif-search />
+<gif-search @fetch-gifs="onFetch" />
 <gif-list :gifs="gifs" />
 </template>
 
@@ -15,6 +15,11 @@ export default {
   data() {
     return {
       gifs: []
+    }
+  },
+  methods: {
+    onFetch(result) {
+      this.gifs = result
     }
   }
 }

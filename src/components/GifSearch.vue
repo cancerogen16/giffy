@@ -19,10 +19,14 @@ export default {
         }, 500)
       },
       search() {
-        fetch(`https://api.giphy.com/v1/gifs/search?api_key=3QIT4DHk8dy5nc3ZQTmRumkz8nhcAqI8&q=${this.keyword}&limit=9`)
+        fetch(`https://api.giphy.com/v1/gifs/search?api_key=3QIT4DHk8dy5nc3ZQTmRumkz8nhcAqI8&q=${this.keyword}&limit=14`)
           .then(response => response.json())
           .then(result => {
             console.log(result)
+
+            this.gifs = result.data
+
+            this.$emit('fetch-gifs', result.data)
           })
       }
     }
