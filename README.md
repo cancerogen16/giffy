@@ -1,5 +1,7 @@
 # giffy
 
+Search gif by text and copy url
+
 ## Project setup
 ```
 npm install
